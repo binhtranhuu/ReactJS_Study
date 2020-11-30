@@ -5,18 +5,24 @@ import Home from './Component/Home';
 import Category from './Component/Category';
 import Content from './Component/Content';
 import Contact from './Component/Contact';
+import Redirect from './Component/Redirect';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="my-blog">
-        <Menu />
-        <Home />
-        {/* <Category />
-        <Content />
-        <Contact /> */}
-        <Footer />
-      </div>
+      <Router>
+        <div className="my-blog">
+          <Menu />
+          <Redirect />
+          <Footer />
+        </div>
+      </Router>
       
     );
   }

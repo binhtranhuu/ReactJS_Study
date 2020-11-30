@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ContentItems from './ContentItems';
+import Data from './../Data/Data.json';
 
 class Category extends Component {
     render() {
@@ -18,60 +20,13 @@ class Category extends Component {
                 {/* Begin Category */}
                 <div className="container">
                     <div className="row">
-                    <div className="col-md-4 my-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 my-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 my-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 mb-4">
-                        <div className="card">
-                        <a href="/"><img className="card-img-top img-fluid" src="http://placehold.it/800x400" alt="My blog" /></a>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href="/">Title of my blog</a></h4>
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem tenetur in distinctio dolor numquam sequi, maxime debitis blanditiis quo exercitationem cupiditate, similique ut laborum. Maiores obcaecati aspernatur beatae exercitationem.</p>
-                        </div>
-                        </div>
-                    </div>
+                        {
+                            Data.map((x, y) => {
+                                return (
+                                    <ContentItems key={y} contentId={x.id} anh={x.anh} tieuDe={x.tieuDe} trichDan={x.trichDan}></ContentItems>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 {/* Begin pagination */}
