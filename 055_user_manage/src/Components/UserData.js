@@ -11,6 +11,15 @@ class UserData extends Component {
             return ("Nomal")
         }
     }
+
+    editUserClick = () => {
+        this.props.EditUser();
+        this.props.changeEditUserStatus();
+    }
+
+    deleteUserClick = (idUser) => {
+        this.props.deleteUserClick(idUser);
+    }
     render() {
         return (
             <tr>
@@ -24,8 +33,8 @@ class UserData extends Component {
                 </td>
                 <td>
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-warning"><i className="fa fa-edit" /> Sửa</button>
-                        <button type="button" className="btn btn-danger"><i className="fa fa-trash" /> Xóa</button>
+                        <button onClick={() => this.editUserClick()} type="button" className="btn btn-warning"><i className="fa fa-edit" /> Sửa</button>
+                        <button onClick={(idUser) => this.deleteUserClick(this.props.id)} type="button" className="btn btn-danger"><i className="fa fa-trash" /> Xóa</button>
                     </div>
                 </td>
             </tr>

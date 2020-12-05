@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import UserData from './UserData';
 
 class TableData extends Component {
+    deleteUserClick = (idUser) => {
+        this.props.deleteUserClick(idUser);
+    }
     render() {
         return (
             <div className="col">
@@ -20,7 +23,7 @@ class TableData extends Component {
                         {
                             this.props.dataUser.map((value, key) => {
                                 return (
-                                    <UserData key={key} stt={key+1} name={value.name} phone={value.phone} permission={value.permission}></UserData>
+                                    <UserData deleteUserClick={(idUser) => this.deleteUserClick(idUser)} changeEditUserStatus={() => this.props.changeEditUserStatus()} EditUser={(user) => this.props.Edit(value)} key={key} stt={key+1} id={value.id} name={value.name} phone={value.phone} permission={value.permission}></UserData>
                                 )
                             })
                         }
