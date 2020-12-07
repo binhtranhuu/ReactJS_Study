@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Tran Huu Binh",
+        "phone": "0967699314",
+        "permission": 1
+    },
+    {
+        "id": 2,
+        "name": "Nguyen Thi Ngoc Lan",
+        "phone": "0123456789",
+        "permission": 2
+    },
+    {
+        "id": 3,
+        "name": "Vu Duc Manh",
+        "phone": "0226688999",
+        "permission": 3
+    },
+    {
+        "id": 4,
+        "name": "Tran Hoang Ha",
+        "phone": "0126498777",
+        "permission": 2
+    },
+    {
+        "id": 5,
+        "name": "Do Thi Thuy Quynh",
+        "phone": "0258963144",
+        "permission": 3
+    },
+    {
+        "id": 6,
+        "name": "Tran Huu Binh An",
+        "phone": "0222222222",
+        "permission": 1
+    }
+]
